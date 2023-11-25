@@ -6,8 +6,8 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public GameState State;
-    public event Action<GameState> OnStateChanged; 
-
+    public event Action<GameState> OnStateChanged;
+    
     public static GameManager Instance { get; private set; }
 
     [SerializeReference] private List<LevelSO> levels;
@@ -21,6 +21,7 @@ public class GameManager : MonoBehaviour
         else 
         { 
             Instance = this; 
+            DontDestroyOnLoad(gameObject);
         } 
     }
 

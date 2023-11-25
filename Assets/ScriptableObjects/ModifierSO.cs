@@ -5,13 +5,19 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Data", menuName = "WackyWizard/Modifier", order = 1)]
 public class ModifierSO : ScriptableObject
 {
-    [field: SerializeField] public bool IsFloorSlippery { get; private set; }
+    public bool IsFloorSlippery;
+    public float ProjectileSpeed = 1;
 
     public void Apply()
     {
         if (IsFloorSlippery)
         {
             //apply the effect
+        }
+
+        if (ProjectileSpeed != 1)
+        {
+            
         }
     }
 }
