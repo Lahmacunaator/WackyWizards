@@ -250,7 +250,13 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Spritesheet_sword_Injury_0: -1140732305555702586
+      Spritesheet_sword_Injury_1: -4432489891871076708
+      Spritesheet_sword_Injury_2: -4935062566178437321
+      Spritesheet_sword_Injury_3: 9036522858778318990
+      Spritesheet_sword_Injury_4: 2969970515308304703
+      Spritesheet_sword_Injury_5: -3256056555459857678
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

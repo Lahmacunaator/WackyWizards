@@ -466,7 +466,22 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Projectile_destroy_0: 3179620736153520223
+      Projectile_destroy_1: -2239306573593742471
+      Projectile_destroy_10: 1274954067395906528
+      Projectile_destroy_11: 6794594658148501222
+      Projectile_destroy_12: -6868317843407718340
+      Projectile_destroy_13: 1014762097515136836
+      Projectile_destroy_14: 4672331727434320674
+      Projectile_destroy_2: 7450063749874602972
+      Projectile_destroy_3: 1727707287495110987
+      Projectile_destroy_4: -224351217006030698
+      Projectile_destroy_5: -4620702720561887630
+      Projectile_destroy_6: -8444911981357068223
+      Projectile_destroy_7: -8658390432936525852
+      Projectile_destroy_8: -3248366134061212453
+      Projectile_destroy_9: 6579672232903574585
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

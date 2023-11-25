@@ -1,19 +1,10 @@
 fileFormatVersion: 2
-guid: 7f0c6ded1f502c845a6eebe44d165eb5
+guid: b435e61cf122ec1468224781af834419
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5764338662037567416
-    second: Spritesheet_sword_Large_0
-  - first:
-      213: -8096721082250393192
-    second: Spritesheet_sword_Large_1
-  - first:
-      213: -6404367675972450505
-    second: Spritesheet_sword_Large_2
-  - first:
-      213: 7775954153512530810
-    second: Spritesheet_sword_Large_3
+      213: 2350297403280568894
+    second: FullHeart_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -109,55 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Spritesheet_sword_Large_0
-      rect:
-        serializedVersion: 2
-        x: 1
-        y: 65
-        width: 38
-        height: 60
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 8b7bccbe87b0fff40800000000000000
-      internalID: 5764338662037567416
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Spritesheet_sword_Large_1
-      rect:
-        serializedVersion: 2
-        x: 36
-        y: 81
-        width: 25
-        height: 25
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 8998c0fe21ba2af80800000000000000
-      internalID: -8096721082250393192
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Spritesheet_sword_Large_2
+      name: FullHeart_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 3
-        width: 45
-        height: 58
+        y: 4
+        width: 64
+        height: 57
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -165,29 +114,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7370baec78d1f17a0800000000000000
-      internalID: -6404367675972450505
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Spritesheet_sword_Large_3
-      rect:
-        serializedVersion: 2
-        x: 37
-        y: 18
-        width: 25
-        height: 25
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a7376d59a1db9eb60800000000000000
-      internalID: 7775954153512530810
+      spriteID: e32bf0f290fed9020800000000000000
+      internalID: 2350297403280568894
       vertices: []
       indices: 
       edges: []
@@ -202,11 +130,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      Spritesheet_sword_Large_0: 5764338662037567416
-      Spritesheet_sword_Large_1: -8096721082250393192
-      Spritesheet_sword_Large_2: -6404367675972450505
-      Spritesheet_sword_Large_3: 7775954153512530810
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
