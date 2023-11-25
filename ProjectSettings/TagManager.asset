@@ -41,3 +41,21 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Floor
+    uniqueID: 405250945
+    locked: 0
+  - name: Carpet
+    uniqueID: 3918405809
+    locked: 0
+  - name: Chest&Bones
+    uniqueID: 3354561883
+    locked: 0
+  - name: Wall
+    uniqueID: 4285132247
+    locked: 0
+  - name: Banner
+    uniqueID: 2023199547
+    locked: 0
+  - name: Character
+    uniqueID: 4253669597
+    locked: 0
