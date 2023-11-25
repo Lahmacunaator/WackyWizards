@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 63144e5371ed55544a0d44ddd608e3cd
+guid: d117273dbb3357f4683eafce7adfc9b0
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6561139421657925989
-    second: carpet03_0
+      213: -37534528055688523
+    second: ground01_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -51,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 64
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -75,7 +75,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -113,12 +113,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: carpet03_0
+      name: ground01_0
       rect:
         serializedVersion: 2
-        x: 15
+        x: 0
         y: 0
-        width: 49
+        width: 64
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -127,8 +127,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b96744a557622f4a0800000000000000
-      internalID: -6561139421657925989
+      spriteID: 5b2cd6cab86aa7ff0800000000000000
+      internalID: -37534528055688523
       vertices: []
       indices: 
       edges: []
@@ -144,7 +144,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      carpet03_0: -6561139421657925989
+      ground01_0: -37534528055688523
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 6088facd194a6f7479d55f85c897097c
+guid: 63144e5371ed55544a0d44ddd608e3cd
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1941874609287707210
-    second: wall04_0
+      213: -6561139421657925989
+    second: carpet03_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -51,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 64
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -113,22 +113,22 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: wall04_0
+      name: carpet03_0
       rect:
         serializedVersion: 2
-        x: 46
+        x: 0
         y: 0
-        width: 18
+        width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6b54e03d4531d05e0800000000000000
-      internalID: -1941874609287707210
+      spriteID: b96744a557622f4a0800000000000000
+      internalID: -6561139421657925989
       vertices: []
       indices: 
       edges: []
@@ -136,7 +136,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 3f948b911e118eb43b210efbc8195770
     internalID: 0
     vertices: []
     indices: 
@@ -144,7 +144,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      wall04_0: -1941874609287707210
+      carpet03_0: -6561139421657925989
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

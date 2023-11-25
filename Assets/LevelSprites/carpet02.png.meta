@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: 9bf8c0d2bd4ab2143a3ba6c336256762
+guid: c854ac6474a4df84cb26b4b50c34e751
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3560852360957142242
-    second: skull_0
-  - first:
-      213: -8364288843974125302
-    second: skull_1
+      213: 2569303653636222336
+    second: carpet02_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -54,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 64
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -116,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: skull_0
+      name: carpet02_0
       rect:
         serializedVersion: 2
-        x: 1
-        y: 28
-        width: 35
-        height: 31
+        x: 0
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -130,29 +127,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e1bd987d4af459ec0800000000000000
-      internalID: -3560852360957142242
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: skull_1
-      rect:
-        serializedVersion: 2
-        x: 25
-        y: 5
-        width: 31
-        height: 25
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a09d820cc931ceb80800000000000000
-      internalID: -8364288843974125302
+      spriteID: 08da91b6f0008a320800000000000000
+      internalID: 2569303653636222336
       vertices: []
       indices: 
       edges: []
@@ -168,8 +144,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      skull_0: -3560852360957142242
-      skull_1: -8364288843974125302
+      carpet02_0: 2569303653636222336
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
