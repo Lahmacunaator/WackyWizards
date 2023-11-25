@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
  
 public class PlayerMovement : MonoBehaviour
@@ -22,6 +23,12 @@ public class PlayerMovement : MonoBehaviour
         dashCooldown = 0;
         rb = GetComponent<Rigidbody2D>();
         xScale = transform.localScale.x;
+        GameManager.Instance.OnStateChanged += OnStateChange;
+    }
+
+    private static void OnStateChange(GameState state)
+    {
+        //lock player movement depending on the state etc.
     }
 
     void Update()
@@ -73,5 +80,10 @@ public class PlayerMovement : MonoBehaviour
     private void Flip()
     {
         transform.localScale = facingDirection.x < 0 ? new Vector3(-1 * xScale, transform.localScale.y) : new Vector3(xScale, transform.localScale.y);
+    }
+
+    private void OnDestroy()
+    {
+        GameManager.Instance.OnStateChanged -= OnStateChange;
     }
 }
