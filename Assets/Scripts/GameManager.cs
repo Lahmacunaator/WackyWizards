@@ -2,12 +2,13 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
     public GameState State;
-    public event Action<GameState> OnStateChanged; 
-
+    public event Action<GameState> OnStateChanged;
+    
     public static GameManager Instance { get; private set; }
 
     [SerializeReference] private List<LevelSO> levels;
@@ -21,6 +22,7 @@ public class GameManager : MonoBehaviour
         else 
         { 
             Instance = this; 
+            DontDestroyOnLoad(gameObject);
         } 
     }
 
@@ -51,7 +53,12 @@ public class GameManager : MonoBehaviour
 
         OnStateChanged?.Invoke(state);
     }
-    
+    public void ChanceScene(int SceneIndex) 
+    {
+        SceneManager.LoadScene(SceneIndex);
+    }
+
+
 }
 
 public enum GameState
