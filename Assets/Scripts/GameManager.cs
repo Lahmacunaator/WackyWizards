@@ -8,6 +8,8 @@ public class GameManager : MonoBehaviour
 {
     public GameState State;
     public event Action<GameState> OnStateChanged;
+    public List<ModifierSO> AllModifiers;
+    private int currentLevel;
     
     public static GameManager Instance { get; private set; }
 
@@ -53,12 +55,21 @@ public class GameManager : MonoBehaviour
 
         OnStateChanged?.Invoke(state);
     }
-    public void ChanceScene(int SceneIndex) 
+    public void ChangeScene(int SceneIndex) 
     {
         SceneManager.LoadScene(SceneIndex);
     }
 
-
+    public void AddModifier(ModifierSO modifier)
+    {
+        foreach (var level in levels)
+        {
+            if (levels.IndexOf(level) < currentLevel-1)
+            {
+                level.AddModifier(modifier);
+            }
+        }
+    }
 }
 
 public enum GameState
