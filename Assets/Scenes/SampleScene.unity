@@ -247,6 +247,7 @@ MonoBehaviour:
   dashKey: 32
   forceDamping: 1.2
   moveSpeed: 4
+  dashCooldown: 5
 --- !u!70 &425902725
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

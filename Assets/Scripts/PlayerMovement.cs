@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
  
 public class PlayerMovement : MonoBehaviour
@@ -11,14 +8,18 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 moveInput;
     private Vector2 facingDirection;
     private float xScale;
+    private float initialDashCooldown;
 
     [SerializeField] private float dashAmount;
     [SerializeField] private KeyCode dashKey;
     [SerializeField] private float forceDamping;
     [SerializeField] private float moveSpeed;
+    [SerializeField] private float dashCooldown;
 
     private void Awake()
     {
+        initialDashCooldown = dashCooldown;
+        dashCooldown = 0;
         rb = GetComponent<Rigidbody2D>();
         xScale = transform.localScale.x;
     }
@@ -28,10 +29,12 @@ public class PlayerMovement : MonoBehaviour
         moveInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized;
 
         FaceDirection(moveInput);
+        dashCooldown -= Time.deltaTime;
 
-        if (Input.GetKeyDown(dashKey))
+        if (Input.GetKeyDown(dashKey) && dashCooldown <= 0)
         {
             forceToApply += facingDirection * dashAmount;
+            dashCooldown = initialDashCooldown;
         }
     }
 
