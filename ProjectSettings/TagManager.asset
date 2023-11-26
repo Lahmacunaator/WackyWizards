@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Push
   - Damage
+  - Wizard
   layers:
   - Default
   - TransparentFX

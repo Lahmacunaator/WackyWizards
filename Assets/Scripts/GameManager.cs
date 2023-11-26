@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -9,11 +10,12 @@ public class GameManager : MonoBehaviour
     public GameState State;
     public event Action<GameState> OnStateChanged;
     public List<ModifierSO> AllModifiers;
-    private int currentLevel;
-    
     public static GameManager Instance { get; private set; }
 
     [SerializeReference] private List<LevelSO> levels;
+    [SerializeReference] private float levelCounter = 45f;
+    private float levelTimer = 0f;
+    private TMP_Text levelTimerText;
 
     private void Awake() 
     {
@@ -30,11 +32,32 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        UpdateGameState(GameState.MainMenu);
+        //UpdateGameState(GameState.MainMenu);
 
         AudioManager.Instance.PlayMusic("MainTheme");
+    }
 
+    private void Update()
+    {
+        if (State != GameState.Level) return;
+        levelTimer += Time.deltaTime;
 
+        UpdateLevelTimerText();
+        
+        if (levelTimer >= levelCounter)
+        {
+            UpdateGameState(GameState.WizardScreen);
+        }
+    }
+
+    private void UpdateLevelTimerText()
+    {
+        if (levelTimerText == null)
+        {
+            levelTimerText = GameObject.Find("LevelTimer").GetComponent<TMP_Text>();
+        }
+        
+        levelTimerText.text = $"{levelCounter-levelTimer}";
     }
 
     public void UpdateGameState(GameState state)
@@ -44,14 +67,21 @@ public class GameManager : MonoBehaviour
         switch (state)
         {
             case GameState.MainMenu:
+                Time.timeScale = 1f;
                 break;
             case GameState.Level:
+                Time.timeScale = 1f;
+                levelTimer = 0;
                 break;
             case GameState.WizardScreen:
+                Time.timeScale = 0f;
+                FindAnyObjectByType<Shop>(FindObjectsInactive.Include).gameObject.SetActive(true);
                 break;
             case GameState.Win:
+                Time.timeScale = 1f;
                 break;
             case GameState.Lose:
+                Time.timeScale = 1f;
                 break;
             default:
                 throw new ArgumentOutOfRangeException(nameof(state), state, "State is null");
@@ -61,9 +91,11 @@ public class GameManager : MonoBehaviour
     }
     public void ChangeScene(int SceneIndex) 
     {
-        
         SceneManager.LoadScene(SceneIndex);
-        
+        if (SceneIndex == 1)
+        {
+            UpdateGameState(GameState.Level);
+        }
     }
 }
 
