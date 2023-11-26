@@ -2709,7 +2709,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dashAmount: 20
   dashKey: 32
-  forceDamping: 1.2
+  forceDamping: 0.01
   moveSpeed: 4
   dashCooldown: 5
 --- !u!70 &425902725
