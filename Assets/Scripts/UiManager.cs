@@ -6,6 +6,7 @@ public class UiManager : MonoBehaviour
 {
     [SerializeField] private GameObject winScreen;
     [SerializeField] private GameObject loseScreen;
+    [SerializeField] private GameObject[] spawners;
     
     // Start is called before the first frame update
     void Start()
@@ -32,5 +33,11 @@ public class UiManager : MonoBehaviour
     public void OnReturnToMenuButtonClicked()
     {
         GameManager.Instance.UpdateGameState(GameState.MainMenu);
+    }
+
+    public void ActivateSpawners(int winCount)
+    {
+        winCount = Mathf.Min(winCount, 3);
+        spawners[winCount].SetActive(true);
     }
 }

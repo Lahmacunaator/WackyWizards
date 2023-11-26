@@ -14,11 +14,12 @@ public class GameManager : MonoBehaviour
 
     [SerializeReference] private List<LevelSO> levels;
     [SerializeReference] private float levelCounter = 45f;
+    
     private float levelTimer = 0f;
     private TMP_Text levelTimerText;
     private UiManager uiManager;
 
-    private float winCount = 0;
+    private int winCount = 0;
     private void Awake() 
     {
         if (Instance != null && Instance != this) 
@@ -85,6 +86,7 @@ public class GameManager : MonoBehaviour
                 Time.timeScale = 1f;
                 levelTimer = 0;
                 uiManager = FindFirstObjectByType<UiManager>();
+                ActivateSpawners();
                 break;
             case GameState.WizardScreen:
                 Time.timeScale = 0f;
@@ -106,6 +108,11 @@ public class GameManager : MonoBehaviour
         State = state;
         
         OnStateChanged?.Invoke(state);
+    }
+
+    public void ActivateSpawners()
+    {
+        uiManager.ActivateSpawners(winCount);
     }
     public void ChangeScene(int SceneIndex) 
     {

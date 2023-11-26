@@ -44,7 +44,6 @@ public class Health : MonoBehaviour
         if (shieldTimer >= shieldCooldown && !isShieldActive)
         {
             ActivateShield();
-            AudioManager.Instance.PlaySound("ShieldSound");
         }
 
         Debug.Log(shieldTimer);
@@ -73,6 +72,7 @@ public class Health : MonoBehaviour
 
     public void UnlockShield()
     {
+        AudioManager.Instance.PlaySound("ShieldSound");
         isShieldUnlocked = true;
         ActivateShield();
     }
