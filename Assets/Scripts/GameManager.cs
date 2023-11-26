@@ -16,7 +16,9 @@ public class GameManager : MonoBehaviour
     [SerializeReference] private float levelCounter = 45f;
     private float levelTimer = 0f;
     private TMP_Text levelTimerText;
+    private UiManager uiManager;
 
+    private float winCount = 0;
     private void Awake() 
     {
         if (Instance != null && Instance != this) 
@@ -46,6 +48,11 @@ public class GameManager : MonoBehaviour
         
         if (levelTimer >= levelCounter)
         {
+            if (winCount >= 4)
+            {
+                UpdateGameState(GameState.Win);
+                return;
+            }
             UpdateGameState(GameState.WizardScreen);
         }
     }
@@ -60,38 +67,48 @@ public class GameManager : MonoBehaviour
         levelTimerText.text = $"{levelCounter-levelTimer}";
     }
 
-    public void UpdateGameState(GameState state)
+    public async void UpdateGameState(GameState state)
     {
-        State = state;
-
         switch (state)
         {
             case GameState.MainMenu:
                 Time.timeScale = 1f;
+                winCount = 0;
+                await SceneManager.LoadSceneAsync(0);
                 break;
             case GameState.Level:
+                if (SceneManager.GetActiveScene().buildIndex != 1)
+                {
+                    await SceneManager.LoadSceneAsync(1);
+                }
+                
                 Time.timeScale = 1f;
                 levelTimer = 0;
+                uiManager = FindFirstObjectByType<UiManager>();
                 break;
             case GameState.WizardScreen:
                 Time.timeScale = 0f;
                 FindAnyObjectByType<Shop>(FindObjectsInactive.Include).gameObject.SetActive(true);
+                winCount++;
                 break;
             case GameState.Win:
-                Time.timeScale = 1f;
+                Time.timeScale = 0f;
+                uiManager.ActivateWinScreen();
                 break;
             case GameState.Lose:
-                Time.timeScale = 1f;
+                uiManager.ActivateLoseScreen();
+                Time.timeScale = 0f;
                 break;
             default:
                 throw new ArgumentOutOfRangeException(nameof(state), state, "State is null");
         }
 
+        State = state;
+        
         OnStateChanged?.Invoke(state);
     }
     public void ChangeScene(int SceneIndex) 
     {
-        SceneManager.LoadScene(SceneIndex);
         if (SceneIndex == 1)
         {
             UpdateGameState(GameState.Level);

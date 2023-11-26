@@ -64,6 +64,11 @@ public class Health : MonoBehaviour
         health--;
         damageCdTimer = 0f;
         AudioManager.Instance.PlaySound("TakeDamageSound");
+
+        if (health <= 0)
+        {
+            GameManager.Instance.UpdateGameState(GameState.Lose);
+        }
     }
 
     public void UnlockShield()
