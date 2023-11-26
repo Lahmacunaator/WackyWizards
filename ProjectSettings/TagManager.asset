@@ -57,5 +57,11 @@ TagManager:
     uniqueID: 2023199547
     locked: 0
   - name: Character
-    uniqueID: 4253669597
+    uniqueID: 1481297847
+    locked: 0
+  - name: Walls
+    uniqueID: 2596325271
+    locked: 0
+  - name: Decorations
+    uniqueID: 1497678995
     locked: 0
