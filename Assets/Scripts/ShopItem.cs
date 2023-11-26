@@ -18,6 +18,7 @@ public class ShopItem : MonoBehaviour
     public void SelectModifier()
     {
         AudioManager.Instance.PlaySound("PowerUpSelect");
+        GameManager.Instance.UpdateGameState(GameState.Level);
         modifier.Apply();
         transform.parent.gameObject.SetActive(false);
     }
