@@ -2581,7 +2581,7 @@ SpriteRenderer:
   m_SortingLayerID: 1481297847
   m_SortingLayer: 6
   m_SortingOrder: 5
-  m_Sprite: {fileID: 8633881525917383573, guid: 365a1ba3d33e4154f849703c1dd90530, type: 3}
+  m_Sprite: {fileID: 7888782753599561824, guid: f2f029e8ed9c3dd4b8f217e40b9833cf, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2601,7 +2601,7 @@ Transform:
   m_GameObject: {fileID: 425902720}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.453, y: 0, z: 0}
+  m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 3, y: 3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2658,7 +2658,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.05, y: 0}
   m_Size: {x: 0.2, y: 0.31}
   m_Direction: 0
 --- !u!50 &425902726
