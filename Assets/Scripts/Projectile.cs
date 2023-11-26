@@ -8,6 +8,9 @@ public class Projectile : MonoBehaviour
 {
     private Rigidbody2D rigidbody2D;
     public MovementType movementType = MovementType.LINEAR;
+
+    private Vector2 forward, spawnPos;
+    private float amp;
     void Awake()
     {
         rigidbody2D = GetComponent<Rigidbody2D>();
@@ -22,20 +25,11 @@ public class Projectile : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        switch (movementType)
+        if (movementType == MovementType.SINE)
         {
-            case MovementType.LINEAR:
-                break;
-            case MovementType.WAVE:
-                var timeSin = Mathf.Sin(Time.deltaTime) * 30;
-                rigidbody2D.AddForce(new Vector2(timeSin, timeSin));
-                break;
-            case MovementType.CURVE:
-                break;
-            case MovementType.STATIONARY:
-                break;
-            default:
-                throw new ArgumentOutOfRangeException();
+            transform.position = Vector3.Lerp(transform.parent.position,
+                new Vector3(spawnPos.x, spawnPos.y - 10),
+                Mathf.Sin(Time.time * amp) * 0.5f + 0.5f);
         }
     }
     
@@ -52,7 +46,9 @@ public class Projectile : MonoBehaviour
             case MovementType.LINEAR:
                 rigidbody2D.AddForce(direction * force);
                 break;
-            case MovementType.WAVE:
+            case MovementType.SINE:
+                forward = direction;
+                amp = force;
                 break;
             case MovementType.CURVE:
                 rigidbody2D.gravityScale = Random.Range(0, 1) == 0 ? force*Time.deltaTime*0.1f : -force*Time.deltaTime*0.1f;
@@ -73,7 +69,7 @@ public class Projectile : MonoBehaviour
 public enum MovementType
 {
     LINEAR,
-    WAVE,
+    SINE,
     CURVE,
     STATIONARY
 }

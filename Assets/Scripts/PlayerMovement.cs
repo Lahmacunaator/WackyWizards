@@ -23,6 +23,10 @@ public class PlayerMovement : MonoBehaviour
         dashCooldown = 0;
         rb = GetComponent<Rigidbody2D>();
         xScale = transform.localScale.x;
+    }
+
+    private void Start()
+    {
         GameManager.Instance.OnStateChanged += OnStateChange;
     }
 
