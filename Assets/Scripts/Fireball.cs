@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Fireball : MonoBehaviour
+public class Fireball: MonoBehaviour
 {
     Rigidbody2D rigidbody2D;
 
@@ -25,9 +25,9 @@ public class Fireball : MonoBehaviour
     {
         rigidbody2D.AddForce(direction * force);
     }
-    void OnCollisionEnter2D(Collision2D other)
+    void OnCollisionEnter2D(Collision2D Character)
     {
-        Debug.Log("Projectile Collision with " + other.gameObject);
+        Debug.Log("Projectile Collision with " + Character.gameObject);
         Destroy(gameObject);
     }
     void FixedUpdate()
