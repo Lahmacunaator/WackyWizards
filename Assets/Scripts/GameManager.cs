@@ -65,17 +65,6 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(SceneIndex);
         
     }
-
-    public void AddModifier(ModifierSO modifier)
-    {
-        foreach (var level in levels)
-        {
-            if (levels.IndexOf(level) < currentLevel-1)
-            {
-                level.AddModifier(modifier);
-            }
-        }
-    }
 }
 
 public enum GameState
