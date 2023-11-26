@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 6e104e044bdc46a44a9f5e8038a782ac
+guid: c86bd3e21f5608846b8fcdd1ceffa7d2
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1128515751340648272
-    second: S1_0
+      213: 5805836613512344513
+    second: S5 1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,24 +96,11 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: S1_0
+      name: S5 1_0
       rect:
         serializedVersion: 2
         x: 0
@@ -127,8 +114,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 057a712c81b49af00800000000000000
-      internalID: 1128515751340648272
+      spriteID: 1c33c5ca3a9729050800000000000000
+      internalID: 5805836613512344513
       vertices: []
       indices: 
       edges: []
@@ -143,8 +130,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      S1_0: 1128515751340648272
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
