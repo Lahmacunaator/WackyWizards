@@ -38,5 +38,6 @@ public class Health : MonoBehaviour
         if (damageCdTimer < damageCooldown) return;
         health--;
         damageCdTimer = 0f;
+        AudioManager.Instance.PlaySound("TakeDamageSound");
     }
 }
