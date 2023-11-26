@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,19 +6,30 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Data", menuName = "WackyWizard/Modifier", order = 1)]
 public class ModifierSO : ScriptableObject
 {
-    public bool IsFloorSlippery;
-    public float ProjectileSpeed = 1;
+    public ModifierType ModifierType;
 
     public void Apply()
     {
-        if (IsFloorSlippery)
+        switch (ModifierType)
         {
-            //apply the effect
-        }
-
-        if (ProjectileSpeed != 1)
-        {
-            
+            case ModifierType.SLIPPERY:
+                FindFirstObjectByType<PlayerMovement>().ActivateSlippery();
+                break;
+            case ModifierType.DASH:
+                FindFirstObjectByType<PlayerMovement>().ActivateDash();
+                break;
+            case ModifierType.SHIELD:
+                FindFirstObjectByType<Health>().UnlockShield();
+                break;
+            default:
+                throw new ArgumentOutOfRangeException();
         }
     }
+}
+
+public enum ModifierType
+{
+    SLIPPERY,
+    DASH,
+    SHIELD
 }

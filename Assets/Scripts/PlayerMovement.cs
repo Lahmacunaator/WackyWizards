@@ -10,6 +10,8 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 facingDirection;
     private float xScale;
     private float initialDashCooldown;
+    private bool canDash;
+    private bool isSlippery;
 
     [SerializeField] private float dashAmount;
     [SerializeField] private KeyCode dashKey;
@@ -42,7 +44,7 @@ public class PlayerMovement : MonoBehaviour
         FaceDirection(moveInput);
         dashCooldown -= Time.deltaTime;
 
-        if (Input.GetKeyDown(dashKey) && dashCooldown <= 0)
+        if (Input.GetKeyDown(dashKey) && dashCooldown <= 0 && canDash)
         {
             AudioManager.Instance.PlaySound("DashSound");
             forceToApply += facingDirection * dashAmount;
@@ -80,6 +82,16 @@ public class PlayerMovement : MonoBehaviour
 
         facingDirection = moveInput;
         Flip();
+    }
+
+    public void ActivateDash()
+    {
+        canDash = true;
+    }
+
+    public void ActivateSlippery()
+    {
+        isSlippery = true;
     }
 
     private void Flip()

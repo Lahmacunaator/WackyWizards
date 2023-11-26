@@ -10,6 +10,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2c743d6e54747d34e8eeaab1122d91d6, type: 3}
-  m_Name: FasterProjectiles
+  m_Name: Dash
   m_EditorClassIdentifier: 
-  IsFloorSlippery: 0
+  ModifierType: 1
