@@ -4104,6 +4104,7 @@ MonoBehaviour:
   State: 0
   AllModifiers: []
   levels: []
+  levelCounter: 45
 --- !u!4 &1603908331
 Transform:
   m_ObjectHideFlags: 0
