@@ -3848,9 +3848,9 @@ MonoBehaviour:
   - {fileID: 658156413}
   FullHeart: {fileID: 2350297403280568894, guid: b435e61cf122ec1468224781af834419, type: 3}
   EmptyHeart: {fileID: -705465144167411356, guid: d2df9e376d53f1a4392aa6a35b033757, type: 3}
-  damageCooldown: 3
-  shieldCooldown: 0
-  shieldActiveTime: 0
+  damageCooldown: 1.71
+  shieldCooldown: 3.29
+  shieldActiveTime: 1.1
   shield: {fileID: 500381490}
 --- !u!1001 &466118608
 PrefabInstance:
@@ -7218,7 +7218,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
