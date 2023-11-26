@@ -27,7 +27,7 @@ public class Shop : MonoBehaviour
 
         foreach (var shopItem in shopButtons)
         {
-            shopItem.UpdateModifier(mods[Random.Range(0, mods.Count)]);
+            shopItem.UpdateModifier(mods[shopButtons.IndexOf(shopItem)]);
         }
     }
 }

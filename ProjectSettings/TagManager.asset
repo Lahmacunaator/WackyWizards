@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Push
   - Damage
+  - Wizard
   layers:
   - Default
   - TransparentFX
@@ -15,7 +16,7 @@ TagManager:
   - UI
   - Floor
   - Carpet
-  - 
+  - Player
   - 
   - 
   - 
