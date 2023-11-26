@@ -427,7 +427,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 989267c84b298f043ae3c02ca6b63705, type: 2}
   - {fileID: 11400000, guid: 3434cd6dc2ead014cacec78e739bcdc5, type: 2}
   levels: []
-  levelCounter: 30
+  levelCounter: 3
 --- !u!4 &282182569
 Transform:
   m_ObjectHideFlags: 0
