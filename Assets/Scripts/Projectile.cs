@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -51,10 +52,15 @@ public class Projectile : MonoBehaviour
                 amp = force;
                 break;
             case MovementType.CURVE:
-                rigidbody2D.gravityScale = Random.Range(0, 1) == 0 ? force*Time.deltaTime*0.1f : -force*Time.deltaTime*0.1f;
+                
                 if (direction == Vector2.up || direction == Vector2.down)
                 {
                     direction = Random.Range(0,1) == 0 ? Vector2.left : Vector2.right;
+                    rigidbody2D.gravityScale = direction==Vector2.down ? -force*Time.deltaTime*0.1f : force*Time.deltaTime*0.1f;
+                }
+                else
+                {
+                    rigidbody2D.gravityScale = Random.Range(0, 1) == 0 ? force*Time.deltaTime*0.1f : -force*Time.deltaTime*0.1f;
                 }
                 rigidbody2D.AddForce(direction * force);
                 break;
@@ -64,7 +70,17 @@ public class Projectile : MonoBehaviour
                 throw new ArgumentOutOfRangeException();
         }
     }
+
+    private void OnCollisionEnter2D(Collision2D col)
+    {
+        if (col.transform.tag.Equals("Player"))
+        {
+            col.gameObject.GetComponent<Health>().TakeDamage();
+            Destroy(gameObject);
+        }
+    }
 }
+
 
 public enum MovementType
 {

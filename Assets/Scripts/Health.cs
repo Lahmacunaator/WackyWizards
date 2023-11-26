@@ -12,6 +12,9 @@ public class Health : MonoBehaviour
     public Sprite FullHeart;
     public Sprite EmptyHeart;
 
+    public float damageCooldown = 3f;
+    private float damageCdTimer = 0f;
+
     private void Update()
     {
         for (int i = 0; i < Hearts.Length; i++) 
@@ -26,5 +29,14 @@ public class Health : MonoBehaviour
                 Hearts[i].sprite = EmptyHeart;
             }
         }
+
+        damageCdTimer += Time.deltaTime;
+    }
+
+    public void TakeDamage()
+    {
+        if (damageCdTimer < damageCooldown) return;
+        health--;
+        damageCdTimer = 0f;
     }
 }
