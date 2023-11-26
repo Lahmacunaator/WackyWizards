@@ -944,8 +944,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waypoints:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 1132332773}
+  - {fileID: 1908350818}
   moveSpeed: 2
 --- !u!212 &1903839531
 SpriteRenderer:
