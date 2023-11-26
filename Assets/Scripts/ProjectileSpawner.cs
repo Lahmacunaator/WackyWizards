@@ -44,6 +44,8 @@ public class ProjectileSpawner : MonoBehaviour
         var projectile = spawn.GetComponent<Projectile>();
         projectile.Launch(launchDirection, firingSpeed);
         SetNextCooldown();
+
+        AudioManager.Instance.PlaySound("SpawnProjectile");
     }
 
     private void SetNextCooldown()

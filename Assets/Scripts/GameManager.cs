@@ -31,6 +31,10 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         UpdateGameState(GameState.MainMenu);
+
+        AudioManager.Instance.PlayMusic("MainTheme");
+
+
     }
 
     public void UpdateGameState(GameState state)
@@ -57,7 +61,9 @@ public class GameManager : MonoBehaviour
     }
     public void ChangeScene(int SceneIndex) 
     {
+        
         SceneManager.LoadScene(SceneIndex);
+        
     }
 
     public void AddModifier(ModifierSO modifier)

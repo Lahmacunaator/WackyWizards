@@ -44,6 +44,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetKeyDown(dashKey) && dashCooldown <= 0)
         {
+            AudioManager.Instance.PlaySound("DashSound");
             forceToApply += facingDirection * dashAmount;
             dashCooldown = initialDashCooldown;
         }
